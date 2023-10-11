@@ -53,3 +53,10 @@ results_df = pd.DataFrame(results).T
 
 results_df
 
+#RESULT
+#                       RMSE  R-squared
+#Decision Tree      0.302575   0.420789
+#Random Forest      0.249455   0.606307
+#Gradient Boosting  0.263026   0.562307
+#Neural Network     0.346799   0.239098
+
