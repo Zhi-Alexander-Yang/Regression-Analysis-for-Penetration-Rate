@@ -1,3 +1,15 @@
+# Import necessary libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import mean_squared_error, r2_score
+
+# File path
+file_path = '/data/1-s2.0-S1365160920308121-mmc1.csv'
+
+# Reload the dataset
+df_decision_tree = pd.read_csv(file_path)
 # Define the features and target variable
 features = ["Percussion pressure", "Feed pressure", "Flush air pressure", "Rotation pressure", "Dampening pressure"]
 target = "Penetration rate"
