@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 # File path
-file_path = '/mnt/data/1-s2.0-S1365160920308121-mmc1.csv'
+file_path = '/data/1-s2.0-S1365160920308121-mmc1.csv'
 
 # Reload the dataset
 df_decision_tree = pd.read_csv(file_path)
@@ -35,4 +35,4 @@ df_decision_tree.head()
 # 1              39.837     8.418   1938      13
 # 2              40.437     7.732   1938      13
 # 3              40.752     6.842   1938      13
-# 4              41.061     6.512   1938      13  
+# 4              41.061     6.512   1938      13
