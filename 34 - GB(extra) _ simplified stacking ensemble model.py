@@ -68,3 +68,34 @@ stacking_results_subset_df
 # 2  db95d6684b  0.250819   0.634970
 # 3  07b4bd5a9d  0.421011   0.887110
 # 4  5b88eb1e23  0.282957   0.898011
+
+# Applying simplified stacking for all holes and getting the evaluation results
+stacking_results_all_holes = {}
+for hole_id in df_gb['Hole id'].unique():
+    stacking_rmse_simplified, stacking_r2_simplified = simplified_stacking_for_hole(hole_id)
+    stacking_results_all_holes[hole_id] = {'RMSE': stacking_rmse_simplified, 'R-Squared': stacking_r2_simplified}
+
+# Stacking evaluation results for all holes
+stacking_results_all_holes_df = pd.DataFrame.from_dict(stacking_results_all_holes, orient='index')
+stacking_results_all_holes_df.reset_index(inplace=True)
+stacking_results_all_holes_df.rename(columns={'index': 'Hole ID'}, inplace=True)
+stacking_results_all_holes_df
+
+RESULT
+       Hole ID      RMSE  R-Squared
+0   29be0312e2  0.329285   0.554940
+1   53034ece37  0.334135   0.356729
+2   db95d6684b  0.250819   0.634970
+3   07b4bd5a9d  0.421011   0.887110
+4   5b88eb1e23  0.282957   0.898011
+5   432e88547b  0.262080   0.422635
+6   c69005e9d6  0.251463   0.599946
+7   35f0f14168  0.630695   0.373362
+8   6a7cb0d5af  0.349059   0.439446
+9   b8960bac07  0.376744   0.593172
+10  519ca0a683  0.336694   0.499044
+11  d6abc83da1  0.486597   0.260670
+12  c4e502a4b2  0.299247   0.613203
+13  be8b244c5c  0.481852  -0.257980
+14  14c2f806ff  0.354666   0.425854
+15  c92afa1018  0.537094   0.625992
