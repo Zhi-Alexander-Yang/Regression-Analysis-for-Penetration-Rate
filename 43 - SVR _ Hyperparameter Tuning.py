@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 
 # Loading the data
-file_path = '/mnt/data/1-s2.0-S1365160920308121-mmc1.csv'
+file_path = '/data/1-s2.0-S1365160920308121-mmc1.csv'
 df = pd.read_csv(file_path)
 
 # Define the target variable and features
